@@ -3,7 +3,7 @@ require('../model/logger');
 
 const mongoose = require('mongoose');
 
-const mongoURI = 'mongodb://localhost:27017/logger_admin_app';
+const mongoURI = process.env.MONGODB_URI + dbName;
 
 async function connectToDatabase() {
     try {
